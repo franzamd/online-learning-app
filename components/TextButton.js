@@ -1,43 +1,35 @@
 import React from 'react';
-import {
-  TouchableOpacity,
-  Text
-} from 'react-native';
+import {TouchableOpacity, Text} from 'react-native';
 
-import {
-  FONTS,
-  COLORS
-} from '../constants'
+import {FONTS, COLORS} from '../constants';
 
 const TextButton = ({
   contentContainerStyle,
   disabled,
   label,
   labelStyle,
-  onPress
+  onPress,
 }) => {
   return (
     <TouchableOpacity
       style={{
-        alignItems: "center",
-        justifyContent: "center",
+        alignItems: 'center',
+        justifyContent: 'center',
         backgroundColor: COLORS.primary,
-        ...contentContainerStyle
+        ...contentContainerStyle,
       }}
       disabled={disabled}
-      onPress={onPress}
-    >
+      onPress={onPress}>
       <Text
-        style={
-          {
-            color: COLORS.white,
-            ...FONTS.h3,
-            ...labelStyle
-          }
-        }
-      >{label}</Text>
+        style={{
+          color: COLORS.white,
+          ...FONTS.h3,
+          ...labelStyle,
+        }}>
+        {label}
+      </Text>
     </TouchableOpacity>
-  )
-}
+  );
+};
 
-export default TextButton
+export default TextButton;
